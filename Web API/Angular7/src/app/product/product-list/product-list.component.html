@@ -1,3 +1,8 @@
-<p>
-  product-list works!
-</p>
+<table class="table table-hover">
+<tr *ngFor="let prod of service.list">
+	<td (click)="populateForm(prod)">{{prod.ProductName}}</td>
+	<td (click)="populateForm(prod)">{{prod.ProductName}}</td>
+	<td (click)="populateForm(prod)">{{prod.Quantity}}</td>
+	<td><button (click)="onDelete(prod.ID)" class="btn btn-sm btn-outline-danger">X</td>
+</tr>
+</table>
